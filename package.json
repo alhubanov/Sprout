@@ -1,0 +1,79 @@
+{
+  "publisher": "ahubanov",
+  "name": "sprout",
+  "displayName": "Sprout",
+  "description": "A VS Code extension for solving programming tasks adapted from open-source software.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "icon": "logo-green.png",
+  "type": "module",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahubanov-eth2/Sprout"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "icon": "logo-green.png",
+          "id": "myLeftPanel",
+          "title": "Task List"
+        }
+      ]
+    },
+    "views": {
+      "myLeftPanel": [
+        {
+          "id": "clonedReposView",
+          "name": "Cloned Repositories",
+          "when": "sprout.hasClonedRepo"
+        },
+        {
+          "icon": "icons.png",
+          "id": "leftView",
+          "name": "Task List"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.32.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "diff": "^8.0.2",
+    "js-yaml": "^4.1.0",
+    "marked": "^16.2.1"
+  },
+  "files": [
+    "out",
+    "package.json",
+    "README.md",
+    "media"
+  ]
+}
