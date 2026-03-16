@@ -9,7 +9,7 @@ Welcome! This repository contains the source code for the Sprout VS Code extensi
 
 (Please note that the words "workflow", "task" and "course" are used interchangeably in this README.)
 
-Sprout is a VS Code extension that is intended as a learning aid for anyone who wants to expand their programming knowledge by solving exercises.
+Sprout is a (still unpublished) VS Code extension that is intended as a learning aid for anyone who wants to expand their programming knowledge by solving exercises.
 The extension enables the user to complete a stepwise workflow of solving a task, where the task is derived from a previously resolved GitHub issue from
 a given open-source software repository (OSS). The workflow provides context for the OSS and breaks down the issue in smaller steps. 
 
